@@ -6,6 +6,16 @@ modules, hardware, and policies vary; check the guidance for your cluster and
 partition before installing software or running workloads.
 
 - Do not use `sudo`; install software in your own environment or contact RC.
+- At the start of work in a Princeton RC cluster environment, check the current
+  login hostname when it is available. A hostname ending in `-vis` or `-vis`
+  followed by digits (for example, `adroit-vis` or `della-vis2`) matches the
+  usual visualization-node naming convention. If the hostname does not match,
+  warn the user that a visualization node is generally recommended for
+  interactive work and suggest reconnecting to one before proceeding. This
+  naming convention is advisory, so check current RC guidance for task-specific
+  suitability; some tasks, such as GPU code compilation on `della-gpu`, may call
+  for another node type. If the hostname or cluster environment is unclear, err
+  on the side of caution.
 - Use Slurm for compute jobs. Login-node rules vary: some visualization/GPU
   nodes support interactive work, while head nodes such as `della9` are for
   preparation and submission. Check the specific cluster's guidance and be
